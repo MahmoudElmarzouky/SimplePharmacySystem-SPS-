@@ -16,12 +16,7 @@ import javax.swing.JFrame;
 public class Pharmacy {
 
     public static void main(String[] args) {
-   Items c =   new Items();
-        JFrame f=new  JFrame();
-        f.add(c);
-         
-        f.setSize(1113,635);
-        f.setVisible(true);
+        new Login().setVisible(true);
     }
     
 }

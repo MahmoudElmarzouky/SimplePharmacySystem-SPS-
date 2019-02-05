@@ -36,8 +36,8 @@ public class Login extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        login = new javax.swing.JButton();
+        exit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,10 +47,12 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/_snake_cup.png"))); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(191, 191, 191));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-keepass-filled-48.png"))); // NOI18N
         jLabel2.setText("كلمة المرور");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(191, 191, 191));
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-name-48.png"))); // NOI18N
         jLabel3.setText("اسم المستخدم");
 
@@ -58,15 +60,22 @@ public class Login extends javax.swing.JFrame {
 
         jTextField2.setBackground(new java.awt.Color(0, 204, 204));
 
-        jButton1.setBackground(new java.awt.Color(0, 51, 102));
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/دخول.png"))); // NOI18N
-        jButton1.setText("دخول ");
+        login.setBackground(new java.awt.Color(0, 51, 102));
+        login.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        login.setForeground(new java.awt.Color(204, 204, 204));
+        login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/دخول.png"))); // NOI18N
+        login.setText("دخول ");
+        login.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginActionPerformed(evt);
+            }
+        });
 
-        jButton2.setBackground(new java.awt.Color(0, 51, 102));
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/خروج.png"))); // NOI18N
-        jButton2.setText("خروج");
+        exit.setBackground(new java.awt.Color(0, 51, 102));
+        exit.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        exit.setForeground(new java.awt.Color(204, 204, 204));
+        exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/خروج.png"))); // NOI18N
+        exit.setText("خروج");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -88,9 +97,9 @@ public class Login extends javax.swing.JFrame {
                         .addGap(43, 43, 43))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(29, 29, 29)
-                        .addComponent(jButton1)
+                        .addComponent(login)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton2)
+                        .addComponent(exit)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -109,8 +118,8 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(exit, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(55, Short.MAX_VALUE))
         );
 
@@ -127,6 +136,11 @@ public class Login extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
+       new Main().setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_loginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -167,14 +181,14 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton exit;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JButton login;
     // End of variables declaration//GEN-END:variables
 
 }

@@ -5,6 +5,8 @@
  */
 package View.Panel;
 
+import View.Frames.bii_sales;
+
 /**
  *
  * @author 20120
@@ -37,7 +39,7 @@ public class Bills extends javax.swing.JPanel {
         jRadioButton5 = new javax.swing.JRadioButton();
         jRadioButton6 = new javax.swing.JRadioButton();
         jLabel9 = new javax.swing.JLabel();
-        jTextField24 = new javax.swing.JTextField();
+        search2_txt = new javax.swing.JTextField();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
@@ -51,7 +53,7 @@ public class Bills extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
-        jButton13 = new javax.swing.JButton();
+        search2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
@@ -59,16 +61,18 @@ public class Bills extends javax.swing.JPanel {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
-        jTextField22 = new javax.swing.JTextField();
+        search_txt = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        print = new javax.swing.JButton();
+        delete = new javax.swing.JButton();
+        deleteall = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
+        sale_today = new javax.swing.JButton();
+        search = new javax.swing.JButton();
 
-        jTabbedPane1.setBackground(new java.awt.Color(204, 204, 204));
+        setBackground(new java.awt.Color(0, 102, 102));
+
+        jTabbedPane1.setBackground(new java.awt.Color(0, 153, 204));
 
         jPanel2.setBackground(new java.awt.Color(0, 102, 102));
 
@@ -104,7 +108,7 @@ public class Bills extends javax.swing.JPanel {
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel9.setText("بحث بواسطه : ");
 
-        jTextField24.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        search2_txt.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
         jButton8.setBackground(new java.awt.Color(188, 188, 188));
         jButton8.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
@@ -125,6 +129,11 @@ public class Bills extends javax.swing.JPanel {
         jButton11.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
         jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/iconfinder_invoice_54223.png"))); // NOI18N
         jButton11.setText("عرض الفاتورة");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("الرقم :");
@@ -156,10 +165,10 @@ public class Bills extends javax.swing.JPanel {
 
         jTextField4.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jButton13.setBackground(new java.awt.Color(188, 188, 188));
-        jButton13.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
-        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Black_Search.png"))); // NOI18N
-        jButton13.setText("بحث");
+        search2.setBackground(new java.awt.Color(188, 188, 188));
+        search2.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        search2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Black_Search.png"))); // NOI18N
+        search2.setText("بحث");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -204,9 +213,9 @@ public class Bills extends javax.swing.JPanel {
                                 .addComponent(jLabel9))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(2, 2, 2)
-                                .addComponent(jButton13)
+                                .addComponent(search2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(search2_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
@@ -258,11 +267,11 @@ public class Bills extends javax.swing.JPanel {
                                 .addComponent(jRadioButton4)))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton13))
+                            .addComponent(search2_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(search2))
                         .addGap(11, 11, 11)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(7, 7, 7)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -302,40 +311,40 @@ public class Bills extends javax.swing.JPanel {
         buttonGroup1.add(jRadioButton3);
         jRadioButton3.setText("الاسم ");
 
-        jTextField22.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        search_txt.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("الاجمالى : ");
 
-        jButton1.setBackground(new java.awt.Color(188, 188, 188));
-        jButton1.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/printers-faxes.png"))); // NOI18N
-        jButton1.setText("طباعة");
+        print.setBackground(new java.awt.Color(188, 188, 188));
+        print.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        print.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/printers-faxes.png"))); // NOI18N
+        print.setText("طباعة");
 
-        jButton2.setBackground(new java.awt.Color(188, 188, 188));
-        jButton2.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/اضافة 1.png"))); // NOI18N
-        jButton2.setText("حذف ");
+        delete.setBackground(new java.awt.Color(188, 188, 188));
+        delete.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        delete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/حذغ.png"))); // NOI18N
+        delete.setText("حذف ");
 
-        jButton4.setBackground(new java.awt.Color(188, 188, 188));
-        jButton4.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/حذغ.png"))); // NOI18N
-        jButton4.setText("حذف الكل ");
+        deleteall.setBackground(new java.awt.Color(188, 188, 188));
+        deleteall.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        deleteall.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/حذغ.png"))); // NOI18N
+        deleteall.setText("حذف الكل ");
 
         jButton5.setBackground(new java.awt.Color(188, 188, 188));
         jButton5.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/iconfinder_Edit_27845.png"))); // NOI18N
         jButton5.setText("استرجاع");
 
-        jButton6.setBackground(new java.awt.Color(188, 188, 188));
-        jButton6.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/iconfinder_invoice_54223.png"))); // NOI18N
-        jButton6.setText("مباع اليوم");
+        sale_today.setBackground(new java.awt.Color(188, 188, 188));
+        sale_today.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        sale_today.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/iconfinder_invoice_54223.png"))); // NOI18N
+        sale_today.setText("مباع اليوم");
 
-        jButton14.setBackground(new java.awt.Color(188, 188, 188));
-        jButton14.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
-        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Black_Search.png"))); // NOI18N
-        jButton14.setText("بحث");
+        search.setBackground(new java.awt.Color(188, 188, 188));
+        search.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
+        search.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Black_Search.png"))); // NOI18N
+        search.setText("بحث");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -353,23 +362,23 @@ public class Bills extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel8))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton14)
+                        .addComponent(search)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField22)))
+                        .addComponent(search_txt)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 165, Short.MAX_VALUE)
-                .addComponent(jButton6)
+                .addComponent(sale_today)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4)
+                .addComponent(deleteall)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
+                .addComponent(delete)
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(print)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel1)
                         .addGap(31, 31, 31))
@@ -380,13 +389,13 @@ public class Bills extends javax.swing.JPanel {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(62, Short.MAX_VALUE)
+                .addGap(62, 62, 62)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(deleteall, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton6))
+                        .addComponent(sale_today))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -396,14 +405,14 @@ public class Bills extends javax.swing.JPanel {
                                 .addComponent(jRadioButton3)))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton14))))
+                            .addComponent(search_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(search))))
                 .addGap(28, 28, 28)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jButton1))
+                    .addComponent(print))
                 .addGap(21, 21, 21))
         );
 
@@ -433,20 +442,20 @@ public class Bills extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton12ActionPerformed
 
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+      new bii_sales().setVisible(true);
+    }//GEN-LAST:event_jButton11ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton delete;
+    private javax.swing.JButton deleteall;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
@@ -471,9 +480,13 @@ public class Bills extends javax.swing.JPanel {
     private javax.swing.JTable jTable3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField22;
-    private javax.swing.JTextField jTextField24;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JButton print;
+    private javax.swing.JButton sale_today;
+    private javax.swing.JButton search;
+    private javax.swing.JButton search2;
+    private javax.swing.JTextField search2_txt;
+    private javax.swing.JTextField search_txt;
     // End of variables declaration//GEN-END:variables
 }
